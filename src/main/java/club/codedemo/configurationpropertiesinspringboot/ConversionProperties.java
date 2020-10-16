@@ -23,7 +23,7 @@ public class ConversionProperties {
     private Duration timeInNano;
 
     /**
-     * 手动设置时间单位
+     * 指定默认时间单位为天
      */
     @DurationUnit(ChronoUnit.DAYS)
     private Duration timeInDays;
@@ -44,8 +44,11 @@ public class ConversionProperties {
     @DataSizeUnit(DataUnit.TERABYTES)
     private DataSize sizeInTB;
 
+    /**
+     * 员工
+     * 该类将使用自定义的转换器EmployeeConverter完成转换过程
+     */
     private Employee employee;
-
 
     public Duration getTimeInDefaultUnit() {
         return timeInDefaultUnit;
@@ -93,5 +96,13 @@ public class ConversionProperties {
 
     public void setSizeInTB(DataSize sizeInTB) {
         this.sizeInTB = sizeInTB;
+    }
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
     }
 }

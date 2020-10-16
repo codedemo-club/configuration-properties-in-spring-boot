@@ -9,7 +9,7 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest
 class ConfigPropertiesTest {
     @Autowired
-    ConfigProperties.BeanMethod beanMethod;
+    BeanMethod beanMethod;
 
     @Test
     void getFoo() {

@@ -22,6 +22,7 @@ import java.util.Map;
 public class SmsConfigProperties {
     /**
      * 短信接口地址
+     * 此字段不为空
      * 请修改配置文件中的sms.api-url的值为空来测试@NotBlank注解
      */
     @NotBlank

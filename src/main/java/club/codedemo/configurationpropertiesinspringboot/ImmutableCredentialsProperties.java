@@ -6,6 +6,7 @@ import org.springframework.boot.context.properties.ConstructorBinding;
 /**
  * 不可变(只读)配置
  *
+ * 此处不适用使用@Configuration注解,原因如下：
  * 使用@Configuration注解时，Spring Boot将按构造函数的参数类型进行自动注入
  * 而此类的构造函数并不适用于自动注入，所以不能够在此类上使用@Configuration注解
  * 使其生效，应该在启动类上加入@EnableConfigurationProperties注解
@@ -13,15 +14,18 @@ import org.springframework.boot.context.properties.ConstructorBinding;
 @ConfigurationProperties(prefix = "sms.credentials")
 @ConstructorBinding
 public class ImmutableCredentialsProperties {
-    private String id;
     /**
-     * 密钥
+     * 字段被声明为final，初始化后不可变
      */
-    private String secret;
+    private final String id;
     /**
-     * 认证令牌
+     * 字段被声明为final，初始化后不可变
      */
-    private String token;
+    private final String secret;
+    /**
+     * 字段被声明为final，初始化后不可变
+     */
+    private final String token;
 
     public ImmutableCredentialsProperties(String id, String secret, String token) {
         this.id = id;
