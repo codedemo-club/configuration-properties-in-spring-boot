@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>club.codedemo</groupId>
 	<artifactId>configuration-properties-in-spring-boot</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>configuration-properties-in-spring-boot</name>
 	<description>@ConfigurationProperties 注解简介</description>
 
